@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio-Full-Stack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmerges/Portfolio-Full-Stack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmerges/Portfolio-Full-Stack/issues"
+  },
+  "homepage": "https://github.com/jmerges/Portfolio-Full-Stack#readme",
+  "dependencies": {
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.5.0"
+  }
+}
