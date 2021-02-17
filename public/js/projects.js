@@ -1,26 +1,28 @@
 $(document).ready(function() {
-    var project1 = {
-        name: "Coding Homepage",
-        link: "https://github.com/michaelanthonyyy/aio-developer-homepage",
-        description: "One-stop-shop for coders and coding enthusiasts to practice coding and healthy mental patterns."
-    };
+    $.get("/api/projects/1", function(res) {
+        console.log(res);
+        console.log(res[0].name);
+        $("#title1").html(res[0].name);
+        $("#link1").html(res[0].link);
+        $("#link1").attr("href", res[0].link);
+        $("#description1").html(res[0].description);
+    });
 
-    function makeProjects() {
-        $.post("/api/projects", project1)
-            .then(data => {
-                console.log(data);
-        });
+    $.get("/api/projects/2", function(res) {
+        console.log(res);
 
-        var skill1 = {
-            ProjectId: 1,
-            name: "Leadership"
-        };
+        $("#title2").html(res[0].name);
+        $("#link2").html(res[0].link);
+        $("#link2").attr("href", res[0].link);
+        $("#description2").html(res[0].description);
+    });
 
-        $.post("/api/skills", skill1)
-            .then(data => {
-                console.log(data);
-        });
-    }
+    $.get("/api/projects/3", function(res) {
+        console.log(res);
 
-    makeProjects();
+        $("#title3").html(res[0].name);
+        $("#link3").html(res[0].link);
+        $("#link3").attr("href", res[0].link);
+        $("#description3").html(res[0].description);
+    });
 });
