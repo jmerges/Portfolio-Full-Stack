@@ -19,4 +19,16 @@ module.exports = function(app) {
             res.json(dbProject);
         });
     });
+
+    app.post("/api/projects", function(req, res) {
+        db.Project.create(req.body).then(function(dbProject) {
+            res.json(dbProject);
+        });
+    });
+
+    app.post("/api/skills", function(req, res) {
+        db.Skill.create(req.body).then(function(dbSkill) {
+            res.json(dbSkill);
+        });
+    });
 };
